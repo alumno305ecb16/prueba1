@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+        <title>Mi aplicacion</title>
+
+        <!--grupo CSS -->
+        <link rel="stylesheet" type="text/css" href="css/mobipick.css" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+
+        
+
+
+
+        <!--grupo JavaScript-->
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/xdate.js"></script>
+
+        <!-- aqui agregue una libreria extra para lo del idioma y formato del selector de fecha -->
+        <script type="text/javascript" src="js/xdate.i18n.js"></script>
+
+        <script type="text/javascript" src="js/mobipick.js"></script>
+        <script src="js/acciones.js" type="text/javascript"></script>
+                
+        <script src="phonegap.js" type="text/javascript"></script>
+        
+ </head>
+
+ <body>
+<!-- Principal -->
+     <div data-role="page" id="principal" >   
+
+      <div data-role="header" >
+       <a href="#pacientes" data-icon="user" class="ui-btn-left">Pacientes</a>
+       <h1> Preguntas 1 </h1>
+      </div>
+
+      <div data-role="main" class="ui-content" >
+       <div align="center">
+       
+       </div>
+      </div>
+        
+        
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="pie"> </div>
+       <div data-role="navbar">
+        <h2> footer </h2>
+       </div>
+      </div>        
+        
+     </div>
+  
+<!-- Principal -->
+
+<!-- Pacientes -->
+     <div data-role="page" id="pacientes" >   
+
+      <div data-role="header" >
+       <h1> Pacientes </h1>
+      </div>
+
+      <div data-role="main" class="ui-content" >
+       <div align="center">
+        <div data-role="controlgroup"  data-type="vertical" style="width:50%">
+         <a href="#nuevo_paciente" class="ui-btn ui-shadow ui-btn-icon-right ui-btn-corner-all ui-icon-edit"> NUEVO Paciente </a>
+         <a href="#" id="btnlistadopacientes" class="ui-btn ui-shadow ui-btn-icon-right ui-btn-corner-all ui-icon-bullets"> ELEGIR PACIENTE </a>
+         <a href="#mostrar_paciente" class="ui-btn ui-shadow ui-btn-icon-right ui-btn-corner-all ui-icon-info"> MOSTRAR PACIENTE </a>
+        </div>
+       </div>
+      </div>
+        
+        
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div class="pie"> </div>
+       <div data-role="navbar">
+        <h2> footer </h2>
+       </div>
+      </div>        
+        
+     </div>
+  
+<!-- pacientes -->
+
+
+<!-- nuevo paciente -->
+     <div data-role="page" id="nuevo_paciente" >   
+
+
+      <div data-role="header" >
+       <h1> Nuevo Paciente </h1>
+      </div>
+         
+      <div data-role="main" class="ui-content" >
+       <div align="center">
+        <div style="width:65%">
+        <label for="TxtInterrogatorioDirecto">Interrogatorio Directo:</label> 
+        <select id="TxtInterrogatorioDirecto" data-role="slider" data-mini="true">
+         <option value="off">No</option>
+         <option value="on" selected="">Si</option>
+        </select>
+        <input id = "TxtNombrePaciente" type="text" placeholder="Nombre Completo Paciente">
+        <input id = "TxtEdadPaciente" type="text" placeholder="Edad">
+        <input id = "TxtDirPaciente"  type="text" placeholder="Direccion">
+        <input id = "TxtFNacPaciente" type="text" placeholder="Fecha Nacimiento">
+        <input id = "TxtFConsultaPaciente" type="text" placeholder="Fecha Consulta">
+         
+
+       <input id="TxtFProbAlumPaciente" type="text" placeholder="Fecha Prob. Alumbramiento">
+       <input id="TxtRiesgoObstetrico" type="text" placeholder="Riesgo obstetrico">
+       <input id="TxtUltimaMPaciente" type="text" placeholder="Ultima Menstruacion">
+       <a id="Guardar" class="ui-btn ui-btn-inline ui-btn-corner-all" >Guardar</a>
+       <a id="Mostrar" class="ui-btn ui-btn-inline ui-btn-corner-all" >Mostrar</a>
+<a id="Borrar" class="ui-btn ui-btn-inline ui-btn-corner-all"> Borrar </a>
+
+        </div>
+       </div>
+      </div>
+        
+       
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+      <div class="pie"> </div>
+       <div data-role="navbar">
+        <h2> footer </h2>
+       </div>
+      </div>        
+        
+     </div>
+  
+<!-- nuevo paciente -->
+
+<!-- seleccion paciente -->
+     <div data-role="page" id="seleccion_paciente" >   
+
+
+      <div data-role="header" >
+       <h1> Listado de Paciente </h1>
+      </div>
+         
+      <div data-role="main" class="ui-content" >
+       <div align="center">
+        <div style="width:65%">
+          <ul data-role="listview" data-inset="true" id="listapacientes">
+           <li class="pacienteseleccionado"><a href="#" >Yo</a>
+          </ul>
+        </div>
+       </div>
+      </div>
+        
+       
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+      <div class="pie"> </div>
+       <div data-role="navbar">
+        <h2> footer </h2>
+       </div>
+      </div>        
+        
+     </div>
+  
+<!-- seleccion paciente -->
+
+
+
+
+ </body>
+</html> 
